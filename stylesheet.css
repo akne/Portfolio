@@ -1,4 +1,5 @@
 :root {
+    --targetWidth: 1000px;
     --bg: #f3f3f3;
     --fg: #2e2e2e;
     --p1: #2d0c39;
@@ -6,7 +7,7 @@
     --p3: #4f1563;
     --p4: #601978;
     --p5: #711d8d;
-    --p6: #8222a2;
+    --p6: #9a29c0;
 }
 
 html {
@@ -22,7 +23,7 @@ body {
 }
 
 #nav-wrap {
-    max-width: 750px;
+    max-width: var(--targetWidth);
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -35,7 +36,7 @@ nav {
 }
 
 nav a {
-    color: #fafafa;
+    color: #f3f3f3;
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
@@ -43,7 +44,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #fafafa;
+    background-color: #f3f3f3;
     color: var(--p3);
 }
 
@@ -51,7 +52,7 @@ nav a:hover {
     background: linear-gradient(145deg, var(--p2), var(--p3), var(--p4), var(--p5));
     background-size: 300%;
     animation: grad 20s ease infinite;
-    color: #fafafa;
+    color: #f3f3f3;
     padding-bottom: 100px;
 }
 
@@ -68,16 +69,20 @@ nav a:hover {
 }
 
 #about #content {
-    padding: 150px 25px 100px 25px;
+    padding: 120px 25px 100px 25px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 750px;
+    max-width: var(--targetWidth);
 }
 
 #about h1 {
     font-weight: 400;
-    font-size: 3em;
-    margin-bottom: 10px;
+    font-size: 3.4em;
+    margin-bottom: 5px;
+}
+
+#about p {
+    margin: 0;
 }
 
 #waves {
@@ -91,6 +96,79 @@ nav a:hover {
 #wave-last path {
     fill: var(--bg);
     fill-opacity: 1;
+}
+
+#projects {
+    max-width: var(--targetWidth);
+    padding: 0 25px 0 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#projects h1 {
+    font-weight: 400;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+#projects hr {
+    width: 40px;
+    height: 3px;
+    background: var(--p6);
+    border: none;
+}
+
+#project-tabs {
+    margin: 20px 0px 0px 0px;
+    display: flex;
+    overflow-x: hidden;
+    cursor: grab;
+    background: var(--fg);
+}
+
+.ptab {
+    white-space: nowrap;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 0;
+    margin: 0;
+    font-size: 1em;
+    background: var(--fg);
+    color: var(--bg);
+    transition: .25s;
+}
+
+.ptab:hover {
+    background: var(--p4);
+    color: #f3f3f3;
+}
+
+.activeTab {
+    background: var(--p5);
+    color: #f3f3f3;
+}
+
+.project {
+    border-left: 1px solid var(--fg);
+    border-right: 1px solid var(--fg);
+    border-bottom: 1px solid var(--fg);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-top: 0;
+    padding: 10px;
+}
+
+.project h2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.project h3 {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 200;
 }
 
 .skill {
