@@ -18,12 +18,12 @@ const stopDrag = function(e) {
     dragging = false;
 }
 
-projectTabs.addEventListener("mousedown", startDrag);
-projectTabs.addEventListener("mouseleave", stopDrag);
-projectTabs.addEventListener("mouseup", stopDrag);
-projectTabs.addEventListener("mousemove", dragTab);
+projectTabs.addEventListener("pointerdown", startDrag);
+projectTabs.addEventListener("pointerleave", stopDrag);
+projectTabs.addEventListener("pointerup", stopDrag);
+projectTabs.addEventListener("pointermove", dragTab);
 
-function switchProject(e, name) {
+function switchProject(name) {
     let tabs = document.getElementsByClassName("ptab");
     let content = document.getElementsByClassName("project");
     for (let i=0; i < content.length; i++) {
@@ -33,5 +33,5 @@ function switchProject(e, name) {
         tabs[i].className = tabs[i].className.replace("activeTab", "");
     }
     document.getElementById(name).style.display = "block";
-    e.currentTarget.className += " activeTab";
+    document.getElementById(name + "-tab").className += " activeTab";
 }
