@@ -35,69 +35,102 @@
             <h1>Projects</h1>
             <hr/>
             <div class="project-standalone">
-                <h2>MDANI</h2>
-                <h3>Web Interface</h3>
-                <p>
-                    MDANI is a proof of concept application proposed by the Bureau of Meteorology that enables users to write natural 
-                    language queries to retrieve information from a gridded data lake. Undertaken as our university capstone project, I 
-                    was responsible for creating the web interface, along with training the Named Entity Recogniser used to extract 
-                    information out of written queries (see: <a href="#NLPUtils">NLPUtils</a>).
-                </p>
-                <span class="skill">JavaScript</span>
-                <span class="skill">React</span>
-                <span class="skill">Semantic UI</span>
+                <div class="project-preview left">
+                    <img src="res/mdani.png">
+                </div>
+                <div class="project-content">
+                    <h2>MDANI</h2>
+                    <h3>Web Interface</h3>
+                    <p>
+                        MDANI is a proof of concept application proposed by the Bureau of Meteorology that enables users to write natural 
+                        language queries to retrieve information from a gridded data lake. Undertaken as our university capstone project, I 
+                        was responsible for creating the web interface, along with training the Named Entity Recogniser used to extract 
+                        information out of written queries (see: <a href="#NLPUtils">NLPUtils</a>).
+                    </p>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">React</span>
+                    <span class="skill">Semantic UI</span>
+                </div>
             </div>
             <div class="project-standalone" id="NLPUtils">
-                <h2>NLPUtils</h2>
-                <h3>spaCy Wrapper</h3>
-                <p>
-
-                </p>
-                <span class="skill">Python</span>
-                <span class="skill">Tkinter</span>
-                <span class="skill">spaCy</span>
+                <div class="project-preview left">
+                    <img src="res/nlputils.png"/>
+                </div>
+                <div class="project-content">
+                    <h2>NLPUtils</h2>
+                    <h3>spaCy Wrapper</h3>
+                    <p>
+                        NLPUtils is a piece of desktop software that acts as a wrapper for some of the command line methods found
+                        in the spaCy library. The software allows users to create document data sets, train Named Entity Recognisers,
+                        easily modify parameters and hyperparameter, and switch workspaces between multiple models.
+                    </p>
+                    <span class="skill">Python</span>
+                    <span class="skill">Tkinter</span>
+                    <span class="skill">spaCy</span>
+                </div>
             </div>
             <div class="project-group">
                 <div id="project-tabs">
                     <button id="Unown-tab" class="ptab activeTab" onclick="switchProject('Unown')">Unown GAN</button>
                     <button id="YGOBoost-tab" class="ptab" onclick="switchProject('YGOBoost')">YGO Booster</button>
-                    <button id="Stocks-tab" class="ptab" onclick="switchProject('Stocks')">Stocks C&S</button>
+                    <button id="Stocks-tab" class="ptab" onclick="switchProject('Stocks')">StocksAPI C&S</button>
                 </div>
                 <div class="project" id="Unown">
-                    <h2>Unown GAN</h2>
-                    <h3>Generative Model, REST API, and Web Interface</h3>
-                    <p>
-    
-                    </p>
-                    <span class="skill">Python</span>
-                    <span class="skill">TensorFlow</span>
-                    <span class="skill">Keras</span>
-                    <span class="skill">Flask</span>
-                    <span class="skill">JavaScript</span>
-                    <span class="skill">React</span>
+                    <div class="project-content">
+                        <h2>Unown GAN</h2>
+                        <h3>Generative Model, REST API, and Web Interface</h3>
+                        <p>
+                            Unown GAN (WIP) is a personal investigation into Generative Adversial Networks, their training processes,
+                            and their utilisation as a web service. The project aims to showcase the interpolation between points
+                            in the latent space of a GAN and demonstrate the bulk generation of images via a REST API and Web 
+                            Interface.
+                        </p>
+                        <span class="skill">Python</span>
+                        <span class="skill">TensorFlow</span>
+                        <span class="skill">Keras</span>
+                        <span class="skill">Flask</span>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">React</span>                        
+                    </div>
+                    <!-- <div class="project-preview right">
+                        <img src="res/ugan.gif"/>
+                    </div> -->
                 </div>
                 <div class="project" id="YGOBoost" style="display:none">
-                    <h2>YGO Booster</h2>
-                    <h3>Yu-Gi-Oh! Booster Opener</h3>
-                    <p>
-    
-                    </p>
-                    <span class="skill">Python</span>
-                    <span class="skill">Tkinter</span>
-                    <span class="skill">SQLite</span>
+                    <div class="project-content">
+                        <h2>YGO Booster</h2>
+                        <h3>Yu-Gi-Oh! Booster Opener</h3>
+                        <p>
+                            YGO Booster is a desktop application that allows users to simulate opening card packs and boxes, create
+                            collections of opened cards, and create usable decks for the Yu-Gi-Oh! TCG.
+                        </p>
+                        <span class="skill">Python</span>
+                        <span class="skill">Tkinter</span>
+                        <span class="skill">SQLite</span>
+                    </div>
+                    <div class="project-preview right">
+                        <img src="res/ygobooster.png"/>
+                    </div>
                 </div>
                 <div class="project" id="Stocks" style="display:none">
-                    <h2>Stocks C&S</h2>
-                    <h3>Web Interface and REST API</h3>
-                    <p>
-    
-                    </p>
-                    <span class="skill">JavaScript</span>
-                    <span class="skill">React</span>
-                    <span class="skill">Express</span>
-                    <span class="skill">MySQL</span>
-                    <span class="skill">JWT</span>
-                    <span class="skill">Knex</span>
+                    <div class="project-content">
+                        <h2>StocksAPI C&S</h2>
+                        <h3>Web Interface and REST API</h3>
+                        <p>
+                            Created for a web development class, StocksAPI C&S consists of a Web Interface and REST API, allowing 
+                            registered users to retrieve stock listings sortable by industry and name, and produce graphs of 
+                            said listings.
+                        </p>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">React</span>
+                        <span class="skill">Express</span>
+                        <span class="skill">MySQL</span>
+                        <span class="skill">JWT</span>
+                        <span class="skill">Knex</span>
+                    </div>
+                    <div class="project-preview right">
+                        <img src="res/stocks.png"/>
+                    </div>
                 </div>
             </div>
         </div>
@@ -105,10 +138,10 @@
             <h1>Resume</h1>
             <hr/>
             <p>
-                Some information has been left out due to basic privacy concerns (i.e. phone number / personal email). 
+                Some information has been omitted due to basic privacy concerns (i.e. phone number / personal email). 
                 Feel free to get in contact to discuss details not covered by the resume or site.
             </p>
-            <a>
+            <a href="res/resume.pdf" target="_blank">
                 View / Download
             </a>
         </div>

@@ -32,6 +32,6 @@ function switchProject(name) {
     for (let i=0; i < tabs.length; i++) {
         tabs[i].className = tabs[i].className.replace("activeTab", "");
     }
-    document.getElementById(name).style.display = "block";
+    document.getElementById(name).style.display = "flex";
     document.getElementById(name + "-tab").className += " activeTab";
 }
