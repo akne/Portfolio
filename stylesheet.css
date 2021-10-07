@@ -1,6 +1,6 @@
 :root {
     --targetWidth: 1000px;
-    --shadow: 0px 5px 5px 1px rgba(0,0,0,0.2);
+    --shadow: 0 5px 5px 1px rgba(0,0,0,0.2);
     --bg: #f3f3f3;
     --fg: #2e2e2e;
     --p1: #2d0c39;
@@ -71,7 +71,7 @@ nav a:hover {
 }
 
 #about #content {
-    padding: 120px 25px 100px 25px;
+    padding: 120px 25px 100px;
     margin-left: auto;
     margin-right: auto;
     max-width: var(--targetWidth);
@@ -116,7 +116,7 @@ nav a:hover {
 
 #projects {
     max-width: var(--targetWidth);
-    padding: 0 25px 30px 25px;
+    padding: 0 25px 30px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -227,7 +227,7 @@ nav a:hover {
 }
 
 .project p, .project-standalone p {
-    margin: 10px 0 10px 0;
+    margin: 10px 0;
     font-size: 1em;
     font-weight: 400;
 }
@@ -237,6 +237,16 @@ nav a:hover {
     background: none;
     color: var(--p5);
     cursor: pointer;
+    text-decoration: none;
+}
+
+.project a:hover, .project-standalone a:hover {
+    text-decoration: underline;
+}
+
+.project-urls {
+    display: block;
+    margin-bottom: 10px;
 }
 
 .skill {
@@ -250,9 +260,9 @@ nav a:hover {
 
 #resume {
     max-width: 500px;
-    margin: 40px auto 0 auto;
+    margin: 40px auto 0;
     text-align: center;
-    padding: 0px 20px 40px 20px;
+    padding: 0 20px 40px;
     display: block;
 }
 
@@ -261,7 +271,7 @@ nav a:hover {
     color: #f3f3f3;
     padding: 10px 20px;
     border-radius: 5px;
-    box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 5px 1px rgba(0,0,0,0.3);
     cursor: pointer;
     margin-top: 5px;
     display: inline-block;
@@ -276,7 +286,7 @@ nav a:hover {
 
 #contact {
     background: var(--p3);
-    padding: 20px 20px 0px 20px;
+    padding: 20px 20px 0;
     color: #f3f3f3;
 }
 
@@ -291,7 +301,7 @@ nav a:hover {
 }
 
 #socials {
-    margin: 30px auto 0 auto;
+    margin: 30px auto 0;
     text-align: center;
 }
 
@@ -299,16 +309,16 @@ nav a:hover {
     fill: #f3f3f3;
     fill-opacity: 1;
     cursor: pointer;
-    margin: 0px 5px;
+    margin: 0 5px;
     text-decoration: none;
 }
 
 #footer {
     background: var(--p3);
-    margin: 0 auto 0 auto;
+    margin: 0 auto 0;
     color: #f3f3f3;
     text-align: center;
-    padding: 40px 0 30px 0;
+    padding: 40px 0 30px;
 }
 
 @media (max-width: 720px) {
@@ -328,7 +338,7 @@ nav a:hover {
         border-bottom-left-radius: 0px;
     }
     .project-preview.right {
-        padding-bottom: 0px;
+        padding-bottom: 0;
     }
     .project-preview.right img {
         border-bottom-left-radius: 5px;

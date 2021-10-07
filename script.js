@@ -14,7 +14,7 @@ const dragTab = function(e) {
     }
 }
 
-const stopDrag = function(e) {
+const stopDrag = function() {
     dragging = false;
 }
 
